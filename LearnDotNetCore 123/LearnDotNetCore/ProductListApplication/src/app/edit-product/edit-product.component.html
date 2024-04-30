@@ -1,0 +1,13 @@
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="productform">
+    <label for="Name">name:</label>
+    <input type="text" formControlName="Name" id="Name">
+    <br>
+    <label for="Price">price:</label>
+    <input type="text" formControlName="Price" id="Price">
+    <br>
+<br>
+    <button type="submit">{{ productId ? 'Update Product' : 'Add Product' }}</button>
+  </div>
+</form>

@@ -1,0 +1,25 @@
+<p>product-list works!</p>
+<p><button (click)="addProduct()">Add to Product</button></p>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+        <button (click)="editProduct(product.id)">Edit</button>
+        <button (click)="deleteProduct(product.id)">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h1>DEMO EXAMPLE</h1>
